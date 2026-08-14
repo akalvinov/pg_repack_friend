@@ -1,0 +1,19 @@
+repack_cmd: pg_repack
+clusters:
+- host: pg1.lab.com
+  port: 5432
+  db: somebase
+  tables:
+     - image_record
+     - bloated
+  user: someuser
+  password: 10dkjfisdfh
+
+- host: pg123.lab.com
+  port: 5432
+  db: grafana
+  tables:
+    - alert
+    - alert_rule
+  user: grafana
+  password: 3jmfksfn
