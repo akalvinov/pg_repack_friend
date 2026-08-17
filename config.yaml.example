@@ -2,18 +2,25 @@ repack_cmd: pg_repack
 clusters:
 - host: pg1.lab.com
   port: 5432
-  db: somebase
+  db: ultradev
   tables:
      - image_record
      - bloated
-  user: someuser
-  password: 10dkjfisdfh
+  user: ultradev
+  password: 2394i0923ir09j0sd9jfsd
 
-- host: pg123.lab.com
+- host: pg1.lab.com
   port: 5432
   db: grafana
-  tables:
+  tables: &grafana-tables
     - alert
     - alert_rule
   user: grafana
-  password: 3jmfksfn
+  password: &grafana-password madasdas324932u4932u432
+
+- host: pg1.lab.com
+  port: 5432
+  db: grafana
+  tables: *grafana-tables
+  user: grafana
+  password: *grafana-password
